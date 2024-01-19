@@ -1,5 +1,5 @@
 FROM nginx:latest
 
-COPY ./html/index.html /usr/share/nginx/html/index.html
+COPY ./nginx/html /usr/share/nginx/html
 
 RUN apt-get update && apt-get install -y procps

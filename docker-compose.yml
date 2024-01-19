@@ -4,7 +4,9 @@ services:
   nginx:
     build:
       context: .
+      dockerfile: nginx/Dockerfile
     ports:
-      - 8000:80
+      - 8080:80
     volumes:
-      - ./html/:/usr/share/nginx/html/
+      - ./nginx/html/main/:/usr/share/nginx/html/
+      - ./nginx/conf.d/:/etc/nginx/conf.d/
